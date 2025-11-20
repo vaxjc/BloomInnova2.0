@@ -5,6 +5,13 @@ import { ArrowRight, CheckCircle2, Target, TrendingUp, DollarSign, Leaf, Users, 
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
+type QuestionOption = {
+  value: string;
+  label: string;
+  icon?: React.ReactElement;
+  desc?: string;
+};
+
 export default function DiagnosticoPage() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [completed, setCompleted] = useState(false);
@@ -61,7 +68,7 @@ export default function DiagnosticoPage() {
         { value: 'manager', label: 'Gerente/Manager' },
         { value: 'sustainability', label: 'Responsable de Sostenibilidad' },
         { value: 'other', label: 'Otro' }
-      ],
+      ] as QuestionOption[],
       icon: <Users className="w-8 h-8" />
     },
     {
@@ -78,7 +85,7 @@ export default function DiagnosticoPage() {
         { value: 'services', label: 'Servicios Profesionales' },
         { value: 'retail', label: 'Retail y Comercio' },
         { value: 'other', label: 'Otra industria' }
-      ],
+      ] as QuestionOption[],
       icon: <Building2 className="w-8 h-8" />
     },
     {
@@ -91,7 +98,7 @@ export default function DiagnosticoPage() {
         { value: '51-200', label: '51-200 empleados (Mediana)' },
         { value: '201-500', label: '201-500 empleados (Grande)' },
         { value: '500+', label: 'Más de 500 empleados (Corporativa)' }
-      ],
+      ] as QuestionOption[],
       icon: <Users className="w-8 h-8" />
     },
     {
@@ -104,7 +111,7 @@ export default function DiagnosticoPage() {
         { value: '3-5', label: '3-5 años' },
         { value: '5-10', label: '5-10 años' },
         { value: '10+', label: 'Más de 10 años' }
-      ],
+      ] as QuestionOption[],
       icon: <TrendingUp className="w-8 h-8" />
     },
     {
@@ -118,7 +125,7 @@ export default function DiagnosticoPage() {
         { value: '500k-1m', label: '$500K - $1M' },
         { value: '1m-5m', label: '$1M - $5M' },
         { value: '5m+', label: 'Más de $5M' }
-      ],
+      ] as QuestionOption[],
       icon: <DollarSign className="w-8 h-8" />
     },
     {
@@ -146,7 +153,7 @@ export default function DiagnosticoPage() {
         { value: 'yes_basic', label: 'Sí, pero de forma básica' },
         { value: 'starting', label: 'Estamos comenzando' },
         { value: 'no', label: 'No, aún no medimos' }
-      ],
+      ] as QuestionOption[],
       icon: <Target className="w-8 h-8" />
     },
     {
@@ -157,7 +164,7 @@ export default function DiagnosticoPage() {
         { value: 'yes', label: 'Sí, está documentada y en ejecución' },
         { value: 'partial', label: 'Parcialmente, estamos trabajando en ello' },
         { value: 'no', label: 'No, necesitamos ayuda para crearla' }
-      ],
+      ] as QuestionOption[],
       icon: <Target className="w-8 h-8" />
     },
     {
@@ -172,7 +179,7 @@ export default function DiagnosticoPage() {
         { value: 'governance', label: 'Gobernanza', desc: 'Transparencia, ética empresarial' },
         { value: 'innovation', label: 'Innovación', desc: 'Tecnología para el bien' },
         { value: 'circular', label: 'Economía Circular', desc: 'Reciclaje, reutilización' }
-      ],
+      ] as QuestionOption[],
       icon: <Leaf className="w-8 h-8" />
     },
     {
@@ -184,7 +191,7 @@ export default function DiagnosticoPage() {
         { value: 'yes_future', label: 'Sí, en los próximos 6-12 meses' },
         { value: 'maybe', label: 'Tal vez, quiero explorar opciones' },
         { value: 'no', label: 'No por el momento' }
-      ],
+      ] as QuestionOption[],
       icon: <DollarSign className="w-8 h-8" />
     },
     {
@@ -198,7 +205,7 @@ export default function DiagnosticoPage() {
         { value: '1m-5m', label: '$1M - $5M (Serie B)' },
         { value: '5m+', label: 'Más de $5M (Serie C+)' },
         { value: 'not-sure', label: 'No estoy seguro aún' }
-      ],
+      ] as QuestionOption[],
       icon: <DollarSign className="w-8 h-8" />
     },
     {
@@ -210,7 +217,7 @@ export default function DiagnosticoPage() {
         { value: 'funding', label: 'Acceder a capital e inversión', icon: <DollarSign className="w-5 h-5" /> },
         { value: 'scale', label: 'Escalar mi empresa con impacto', icon: <TrendingUp className="w-5 h-5" /> },
         { value: 'strategy', label: 'Desarrollar una estrategia regenerativa', icon: <Leaf className="w-5 h-5" /> }
-      ],
+      ] as QuestionOption[],
       icon: <TrendingUp className="w-8 h-8" />
     },
     {
@@ -222,7 +229,7 @@ export default function DiagnosticoPage() {
         { value: '6months', label: '3-6 meses' },
         { value: '12months', label: '6-12 meses' },
         { value: 'flexible', label: 'Más de 12 meses (flexible)' }
-      ],
+      ] as QuestionOption[],
       icon: <TrendingUp className="w-8 h-8" />
     },
     {
